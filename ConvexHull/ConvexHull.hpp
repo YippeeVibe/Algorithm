@@ -1,6 +1,7 @@
 #include <vector>
 #include <type_traits>
 #include <iostream>
+#include <algorithm>
 /*
 1. 使用模板在编译器定义生成返回。（当然也可以使用宏，但是并不是最好的选择。）(has do)
 2. 
@@ -10,7 +11,7 @@ enum class PointCompareType {
   CompareY,
   CompareXY
 };
-template<typename T = int,PointCompareType compareT = PointCompareType::CompareXY>
+template<typename T = int,PointCompareType compareT = PointCompareType::CompareX>
 struct Point {
     Point(T x,T y)
       :x(x),y(y) {  
@@ -75,9 +76,10 @@ public:
   ConvexHull(std::vector<T>& p)
     :pointS(pointS) {
     static_assert(std::is_arithmetic<T>::value == true, "");
+    pointS.insert(pointS.begin(),p.begin(),p.end());
+    std::sort(pointS.begin(),pointS.end());
   }
-  std::vector<T> pointS;
-
+  std::vector<T> pointS; 
 };
 
 template<typename T = int>

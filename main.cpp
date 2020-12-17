@@ -24,6 +24,6 @@
 // #endif
   
 // }
-int main() {
-  
+int main() { 
+    std::cout<<"Hello,World!"<<std::endl;
 }
