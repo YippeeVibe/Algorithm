@@ -47,7 +47,7 @@ struct Point {
         if(l_p.x == r_p.x)
           return true;
         else
-          return false;
+          return false;//I don't give a 
       } else if (compareT == PointCompareType::CompareY) {
         if(l_p.y == r_p.y)
           return true;
