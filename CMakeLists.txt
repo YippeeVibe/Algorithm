@@ -1,4 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
+#set(CMAKE_TOOLCHAIN_FILE ${CMAKE_CURRENT_SOURCE_DIR} D:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake
+#CACHE STRING "Vcpkg toolchain file")
 project(Algorithm_DataStruct LANGUAGES CXX)
 
 # 使用ccache编译缓存，加快编译速度
@@ -11,7 +13,7 @@ else()
     message("####ccache has unloaded!")
 endif()
 #设置使用clang(kei'lang)编译器
-set(CMAKE_CXX_COMPILER clang++-10)
+#set(CMAKE_CXX_COMPILER clang++-10)
 # 打印当前的操作系统 和C++ 编译器
 message("####current system: ${CMAKE_SYSTEM_NAME}")
 message("####current cxx_compiler ${CMAKE_CXX_COMPILER}")

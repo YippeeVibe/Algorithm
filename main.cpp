@@ -1,3 +1,5 @@
+//使用这个代替#ifdef#endif
+//_Pragma("once")
 #include <iostream>
 #include "Hanoi/hanoi.hpp"
 #include <list>
