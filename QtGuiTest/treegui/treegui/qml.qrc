@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>BTNode.qml</file>
+        <file>tree.qml</file>
+    </qresource>
+</RCC>
