@@ -23,8 +23,7 @@
 //   std::cout<<"Linux"<<std::endl;
 // #elif WIN32
 //   std::cout<<"Windows"<<std::endl;
-// #endif
-  
+// #endif 
 // }
 
 class B
@@ -50,23 +49,8 @@ void (B::*f_p1)();
 };
 
 int main() { 
-    A a;
-    B b;
 
-    a.f_p= &A::f;
-    a.f_p1 = &B::f;
-
-    (a.*(a.f_p))();
-    (b.*(a.f_p1))();
-
-    void* a_void = &(a.f_p);
-    void* b_void = &(a.f_p1);
-    //auto dd = a.f_p1;
-    //auto c = (void(A::**)())(a_void);
-    //auto d = (void(B::**)())(b_void);
-    (a.**((void(A::**)())(a_void)))();
-    (b.**((void(B::**)())(b_void)))();
-
+    std::cout<<"Hello,World";
 
     
 }

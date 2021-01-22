@@ -7,8 +7,11 @@ Window {
     visible: true
     title: qsTr("Hello World")
     BTNode {
+        id:btnode
         x:0
         y:0
 
     }
+
+
 }
